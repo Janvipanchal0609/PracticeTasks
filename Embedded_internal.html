@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <style>
+
+          p {
+                color:white;
+            }
+            #line1 {
+                color:red;
+                font:bold italic 20px "Courier New";
+                /* font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-style: italic; */
+            }
+            
+            .abc {
+                color:blue;
+                font: bold italic 20px "Courier New";
+            }
+           
+            .abc.second {
+                color:yellow;
+                font: bold italic 20px "Courier New";
+            }
+            .abc.third {
+                color:green;
+                font: bold italic 20px "Courier New";
+            }
+            p:hover {
+                cursor: pointer;
+                user-select: none;
+                background-color:red;
+                /* background-color:red;
+                transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.6s; */ */
+            }
+            p:hover {
+                cursor: pointer;
+                user-select: none;
+                background-color:blue;
+            }
+            p:hover {
+                cursor: pointer;
+                user-select: none;
+                background-color:yellow;
+            }
+            /* .abc:hover ~ .abc.third { */
+            p:hover {
+                cursor: pointer;
+                user-select: none;
+                background-color:green;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <p id="line1" myattr1="demo 1">red</p>
+        <p class="abc">blue</p>
+        <p class="abc second">yellow</p>
+        <p class="abc third">green</p>
+    </body>
+</html>
