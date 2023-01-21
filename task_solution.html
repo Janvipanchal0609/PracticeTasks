@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Solution</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div.color-selector {
+            width: 412px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid #333; */
+        }
+
+        ul li.purple {
+            background-color:purple;
+        }
+
+        ul li.darkcyan {
+            background-color:darkcyan;
+        }
+
+        ul li.maroon {
+            background-color:maroon;
+        }
+
+        ul li.indigo{
+            background-color:indigo;
+        }
+
+        div.viewer {
+            position: relative;
+            border: solid 1px #333;
+            width: 410px;
+            height: 100px;
+            transition: all 0.3s ease-in-out;
+        }
+        div.viewer::after {
+            position: absolute;
+            content: 'No Color';
+            font: 35px "Verdana";
+            width: max-content;
+            height: max-content;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        ul li:hover ~ div.viewer {
+            color:black;
+        }
+        ul li.purple:hover ~ div.viewer {
+            background-color:purple;
+        }
+        ul li.purple:hover ~ div.viewer::after {
+            content: 'purple';
+        }
+        ul li.darkcyan:hover ~ div.viewer {
+            background-color:darkcyan;
+        }
+        ul li.darkcyan:hover ~ div.viewer::after {
+            content: 'darkcyan';
+        }
+        ul li.maroon:hover ~ div.viewer {
+            background-color:maroon;
+        }
+        ul li.maroon:hover ~ div.viewer::after {
+            content: 'maroon';
+        }
+        ul li.indigo:hover ~ div.viewer {
+            background-color:indigo;
+        }
+        ul li.indigo:hover ~ div.viewer::after {
+            content: 'indigo';
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="color-selector">
+        <ul>
+            <li class="purple"></li>
+            <li class="darkcyan"></li>
+            <li class="maroon"></li>
+            <li class="indigo"></li>
+            <div class="viewer"></div>
+        </ul>
+    </div>
+    
+</body>
+
+</html>
